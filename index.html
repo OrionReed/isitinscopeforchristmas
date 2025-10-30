@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>isitinscopeforchristmas</title>
+    <title>is it in scope for christmas?</title>
   </head>
   <body
     style="
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      display: grid;
+      place-items: center;
       height: 100vh;
       margin: 0;
       font-size: 6rem;
     "
   >
     <h1>NEIN</h1>
+    <script>
+      const h = new Date().getHours();
+      document.querySelector("h1").textContent =
+        h >= 11 && h < 14
+          ? "maybe we should..."
+          : Math.random() < 1 / 7
+          ? "YES"
+          : "NEIN";
+    </script>
   </body>
 </html>
